@@ -14,6 +14,7 @@ import { BebidasComponent } from './components/cliente-components/bebidas/bebida
 import { PostresComponent } from './components/cliente-components/postres/postres.component';
 import { CompraProductoComponent } from './components/cliente-components/compra-producto/compra-producto.component';
 import { MetodoPagoComponent } from './components/cliente-components/metodo-pago/metodo-pago.component';
+import { AgregarAlmuerzoComponent } from './components/admin-components/agregar-almuerzo/agregar-almuerzo.component';
 
 const routes: Routes = [
 
@@ -29,18 +30,17 @@ const routes: Routes = [
 
   //Carpeta Admin-components (components de vista de usuario admin)
   { path: 'perfil-admin', component: PerfilAdminComponent },
+  { path: 'agregar-almuerzo', component: AgregarAlmuerzoComponent },
 
+
+  //Carpeta Admin-components (components de vista de usuario admin)
+  { path: 'perfil-cliente', component: PerfilClienteComponent },
   { path: 'almuerzos', component: AlmuerzosComponent },
   { path: 'bebidas', component: BebidasComponent },
   { path: 'postres', component: PostresComponent },
 
   { path: 'compra-producto', component: CompraProductoComponent },
   { path: 'metodo-pago', component: MetodoPagoComponent },
-
-
-  //Carpeta Admin-components (components de vista de usuario admin)
-  { path: 'perfil-cliente', component: PerfilClienteComponent },
-
 
   // Carpeta Shared (components de información o error)
   { path: 'sobre-nosotros', component: SobreNosotrosComponent },
