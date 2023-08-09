@@ -1,57 +1,50 @@
-<body>
-    <br>
-    <div class="container-fluid w-75 bg-primary rounded shadow">
-        <div class="row align-items-stretch">
-
-            <div class="col bg-login d-none d-lg-block col-md-10 col-lg-5 col-xl-6">
+<div class="container">
+    <div class="card">
+      <div class="card-header">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/login" routerLinkActive="active">
+              <i class="fas fa-sign-in-alt"></i>  Login
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/registro" routerLinkActive="active">
+              <i class="fas fa-user-plus"></i> Registrarse
+            </a>
+          </li> 
+        </ul>
+      </div>
+      <div class="card-body">
+        <div class="login-container">
+          <div class="logo-container">
+            <img src="assets/access.png" alt="Logo" class="img-fluid">
+          </div>
+          <h1 class="text-center">Iniciar sesión</h1>
+          <form [formGroup]="loginForm" (ngSubmit)="saveLogin()">
+            <div class="form-group">
+              <label for="email">Email*</label>
+              <input type="text" id="email" formControlName="email" placeholder="Ingrese su email">
+              <small *ngIf="validInput('email')" class="form-text text-danger">
+                Email requerido.
+              </small>
             </div>
-
-            <div class="col bg-white p-5 rounded-end">
-                <div class="text-end">
-                    <h1 class="fw-bold text-center py-4">Bienvenido</h1>
-                    <!-- LOGIN -->
-                    <div class="mb-15" class="text-left">
-                        <label for="email" class="form-label"><strong>Correo electrónico:</strong></label>
-                        <input class="form-control" type="email" placeholder="Ingresa tu correo electrónico" required>
-                    </div>
-                    <br>
-                    <div class="mb-4" class="text-left">
-                        <label for="password" class="form-label"><strong>Contraseña:</strong></label>
-                        <input type="password" class="form-control" placeholder="Ingresa tu contraseña" required>
-                    </div>
-                    <br>
-
-                    <div align="center">
-                        <button routerLink="/menu/home"><strong>Iniciar Sesión</strong></button>
-                    </div>
-                    <br>
-                    <div class="my-3" class="text-center">
-                        <span align="center">¿Aún no tienes una cuenta? Crea una <a routerLink="/registro">Regístrate
-                                aquí</a></span>
-                    </div>
-
-                    <!-- LOGIN CON GOOGLE -->
-
-                    <!--                     <div class="container w-100 my-4">
-                        <div class="row text-center"><br>
-                            <div class="row py-3">
-                                <button class="btn btn-outline-danger w-100 my-1">
-                                    <div class="row align-items-center">
-                                        <div class="col-2 d-none d-md-block">
-                                            <img src="../assets/images/google.svg" width="32" alt="">
-                                        </div>
-                                        <div class="col-12 col-md-10 text-center">
-                                            Ingresar con Google
-                                        </div>
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-                    </div> -->
-
-                </div>
+            
+            <div class="form-group">
+              <label for="password">Password*</label>
+              <input type="password" id="password" formControlName="password" placeholder="Ingrese su contraseña">
+              <small *ngIf="validInput('password')" class="form-text text-danger">
+                Password requerido
+              </small>
             </div>
+            <button type="submit" [disabled]="loginForm.invalid" class="btn1">Entrar</button>
+          </form>
         </div>
+      </div>
     </div>
-    <br>
-</body>
+  </div>
+  <!-- <pre>{{ loginForm.value | json }}</pre>
+  <hr> -->
+  
+  
+  
+  

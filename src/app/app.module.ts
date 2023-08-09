@@ -11,6 +11,12 @@ import { PaginaErrorComponent } from './shared/pagina-error/pagina-error.compone
 import { SobreNosotrosComponent } from './shared/sobre-nosotros/sobre-nosotros.component';
 import { ContactoComponent } from './shared/contacto/contacto.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { ClienteComponentsModule } from './components/cliente-components/cliente-components.module';
+import { AdminComponentsModule } from './components/admin-components/admin-components.module';
+import { RouterLink } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -22,11 +28,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PaginaErrorComponent,
     SobreNosotrosComponent,
     ContactoComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    CommonModule,
+    HttpClientModule,
+    RouterLink,
+
+    // Importa los modulos de Cliente y Admin
+    ClienteComponentsModule,
+    AdminComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
