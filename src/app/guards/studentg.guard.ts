@@ -27,18 +27,18 @@ export class StudentgGuard implements CanActivate {
           localStorage.removeItem('user');
           console.log('LocalStorage borrado');
           this.errorAlert();
-          this.router.navigateByUrl('/login'); // Redirigir a la ruta deseada para el rol_id 2
+          this.router.navigateByUrl('login'); // Redirigir a la ruta deseada para el rol_id 2
           return false; // Permiso denegado
         }
       } else {
         console.log('No se encontraron datos de usuario en el Local Storage');
-        this.router.navigateByUrl('/login');
+        this.router.navigateByUrl('login');
         return false; // Permiso denegado
       }
     } else {
       console.log('No estoy logueado');
       this.errorAlert();
-      this.router.navigateByUrl('/login');
+      this.router.navigateByUrl('login');
       return false; // Permiso denegado
     }
   }

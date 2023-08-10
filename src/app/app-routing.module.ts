@@ -31,22 +31,17 @@ const routes: Routes = [
   // Carpeta Components (components de vistas de usuario cliente - admin)
   { path: 'registro', component: RegistroComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'home-admin', component: HomeAdminComponent },
-  { path: 'home-cliente', component: HomeClienteComponent },
 
 
-  //Carpeta Admin-components (components de vista de usuario admin)
-  { path: 'perfil-admin', component: PerfilAdminComponent },
-  { path: 'agregar-almuerzo', component: AgregarAlmuerzoComponent },
-  { path: 'bebidas', component: BebidasComponent },
 
 
   //Carpeta Cliente-components (components de vista de usuario Cliente)
   {
-    path: 'menu',
-    component: MenuComponent,
+    path: 'home',
+    component: HomeComponent,
     canActivate: [StudentgGuard]
   },
+  
   {
     path: 'almuerzos',
     component: AlmuerzosComponent,
@@ -75,6 +70,11 @@ const routes: Routes = [
   {
     path: 'perfil-cliente',
     component: PerfilClienteComponent,
+    canActivate: [StudentgGuard]
+  },
+  {
+    path: 'home-cliente',
+    component: HomeClienteComponent,
     canActivate: [StudentgGuard]
   },
 

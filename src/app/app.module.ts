@@ -17,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ClienteComponentsModule } from './components/cliente-components/cliente-components.module';
 import { AdminComponentsModule } from './components/admin-components/admin-components.module';
 import { RouterLink } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { RouterLink } from '@angular/router';
 
     // Importa los modulos de Cliente y Admin
     ClienteComponentsModule,
-    AdminComponentsModule
+    AdminComponentsModule,
+    MatIconModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
