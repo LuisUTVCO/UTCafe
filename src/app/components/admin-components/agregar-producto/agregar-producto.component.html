@@ -1,0 +1,40 @@
+<body>
+    <div class="card">
+        <!-- <div align="center" class="p-1">
+            <img src="/assets/images/logo.png" class="logo">
+        </div> -->
+        <div class="p-3" align="center">
+            <span class="title">Agregar Producto</span>
+        </div>
+        <form class="form" [formGroup]="asesoriaForm" (ngSubmit)="saveData()">
+            <div class="group">
+                <input placeholder="‎" type="text" required="" formControlName="nombre" (change)="updateProgress()">
+                <label for="name">Nombre del producto</label>
+            </div>
+            <div class="group">
+                <input placeholder="‎" type="number" formControlName="precio" (change)="updateProgress()" required="">
+                <label for="email">Costo del producto</label>
+            </div>
+            <div class="group">
+                <textarea placeholder="‎" id="exampleFormControlTextarea1" rows="3" formControlName="desc"
+                    (change)="updateProgress()" required=""></textarea>
+                <label for="comment">Descripción del producto</label>
+            </div>
+
+            <div class="group">
+                <label class="form-label">Tipo de producto</label>
+                <select class="form-control" style="border-radius: 10px;">
+                    <option value="" selected>Seleccionar</option>
+                    <option value="1">Almuerzos</option>
+                    <option value="2">Bebidas</option>
+                    <option value="3">Postres</option>
+                </select>
+            </div><p><br></p>
+
+            <button type="submit" [disabled]="asesoriaForm.invalid">Agregar</button>
+            <p></p>
+        </form>
+    </div>
+
+
+</body>

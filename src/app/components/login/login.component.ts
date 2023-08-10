@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
     Swal.fire({
       position: 'center',
       icon: 'success',
-      title: 'Login exitoso!!!',
+      title: 'Inicio de Sesión Exitoso',
       showConfirmButton: false,
       timer: 1500
     })

@@ -8,7 +8,6 @@ import { PaginaErrorComponent } from './shared/pagina-error/pagina-error.compone
 import { SobreNosotrosComponent } from './shared/sobre-nosotros/sobre-nosotros.component';
 import { ContactoComponent } from './shared/contacto/contacto.component';
 import { PerfilAdminComponent } from './components/admin-components/perfil-admin/perfil-admin.component';
-import { AgregarAlmuerzoComponent } from './components/admin-components/agregar-almuerzo/agregar-almuerzo.component';
 import { BebidasComponent } from './components/cliente-components/bebidas/bebidas.component';
 import { StudentgGuard } from './guards/studentg.guard';
 import { HomeComponent } from './components/cliente-components/home/home.component';
@@ -18,6 +17,7 @@ import { PostresComponent } from './components/cliente-components/postres/postre
 import { CompraProductoComponent } from './components/cliente-components/compra-producto/compra-producto.component';
 import { MetodoPagoComponent } from './components/cliente-components/metodo-pago/metodo-pago.component';
 import { PerfilClienteComponent } from './components/cliente-components/perfil-cliente/perfil-cliente.component';
+import { AgregarProductoComponent } from './components/admin-components/agregar-producto/agregar-producto.component';
 
 const routes: Routes = [
 
@@ -31,13 +31,12 @@ const routes: Routes = [
   // Carpeta Components (components de vistas de usuario cliente - admin)
   { path: 'registro', component: RegistroComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'home-admin', component: HomeAdminComponent },
-  { path: 'home-cliente', component: HomeClienteComponent },
+
 
 
   //Carpeta Admin-components (components de vista de usuario admin)
   { path: 'perfil-admin', component: PerfilAdminComponent },
-  { path: 'agregar-almuerzo', component: AgregarAlmuerzoComponent },
+  { path: 'agregar-producto', component: AgregarProductoComponent },
   { path: 'bebidas', component: BebidasComponent },
 
 

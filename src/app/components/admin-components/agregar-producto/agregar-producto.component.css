@@ -1,5 +1,5 @@
 body {
-  background-image: url('/assets/images/fondo.png');
+  background-image: url('/assets/images/cafe.png');
   background-size: cover;
   height: 100vh;
   display: grid;
@@ -18,11 +18,11 @@ body {
 
 .card {
   background-color: #fff;
-  border-radius: 25px;
+  border-radius: 10px;
   padding: 20px;
-  box-shadow: 5px 10px 15px 15px rgba(0, 0, 0, 0.1); /* Sobreado aquí */
   width: 350px;
   display: flex;
+  box-shadow: 5px 10px 15px 15px rgba(0, 0, 0, 0.1); /* Sobreado aquí */
   flex-direction: column;
 }
 
@@ -30,7 +30,7 @@ body {
   font-size: 24px;
   font-weight: 600;
   text-align: center;
-  color: #0b0b0b;
+  color: #222831;
 }
 
 .form {
@@ -103,17 +103,3 @@ body {
   background-color: #f67f00;
 }
 
-.span {
-  font-size: 14px;
-  margin-left: 5px;
-  color: #2d79f3;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.p {
-  text-align: center;
-  color: black;
-  font-size: 14px;
-  margin: 5px 0;
-}
